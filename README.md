@@ -47,9 +47,9 @@ hw3/
 ## Запуск
 
 Требования:
-	•	Docker 20.10+
-	•	Docker Compose 2.0+
-	•	Python 3.10+
+- Docker 20.10+
+- Docker Compose 2.0+
+- Python 3.10+
 
 Клонируем репозиторий:
 
