@@ -30,7 +30,7 @@ https://www.kaggle.com/competitions/teta-ml-1-2025/data?select=train.csv
 
 hw3/
 ├── data/
-│   └── train.csv                 # Данные
+│   └──                  		  # Данные
 │
 ├── scripts/
 │   └── load_kafka.py             # Python-скрипт загрузки CSV → Kafka     
@@ -57,6 +57,8 @@ hw3/
 git clone https://github.com/htutb/mts_mlops25_hw3
 cd mts_mlops25_hw3
 ```
+
+!!!Поместите файл train.csv в папку data!!!
 
 Запускаем инфраструктуру:
 ```bash
