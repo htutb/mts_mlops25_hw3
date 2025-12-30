@@ -34,7 +34,7 @@ hw3/
 │   └──                  		  # Данные
 │
 ├── scripts/
-│   └── load_kafka.py             # Python-скрипт загрузки CSV → Kafka     
+│   └── load_kafka.py             # Python-скрипт загрузки CSV -> Kafka     
 │
 ├── sql/
 │   ├── ddl.sql                   # Базовый DDL 
