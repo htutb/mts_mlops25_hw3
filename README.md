@@ -28,6 +28,7 @@ https://www.kaggle.com/competitions/teta-ml-1-2025/data?select=train.csv
 
 ## Структура репозитория
 
+```
 hw3/
 ├── data/
 │   └──                  		  # Данные
@@ -42,7 +43,8 @@ hw3/
 │
 ├── docker-compose.yml             
 ├── requirements.txt               
-└── README.md                      
+└── README.md     
+```                 
 
 ## Запуск
 
