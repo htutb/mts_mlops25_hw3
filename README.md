@@ -60,8 +60,6 @@ git clone https://github.com/htutb/mts_mlops25_hw3
 cd mts_mlops25_hw3
 ```
 
-!!!Поместите файл train.csv в папку data!!!
-
 Запускаем инфраструктуру:
 ```bash
 docker compose up -d
@@ -71,15 +69,15 @@ docker compose up -d
 
 1) Базовая
 ```bash
-docker exec -i clickhouse clickhouse-client \
-  -u click --password click < sql/ddl.sql
+docker exec -i clickhouse clickhouse-client -u click --password click < sql/ddl.sql
 ```
 
 2) Оптимизированная
 ```bash
-docker exec -i clickhouse clickhouse-client \
-  -u click --password click < sql/optimized_ddl.sql
+docker exec -i clickhouse clickhouse-client -u click --password click < sql/optimized_ddl.sql
 ```
+
+!!!Поместите файл train.csv в папку data перед запуском скрипта!!!
 
 Загружаем данные в Kafka
 ```bash
@@ -89,5 +87,5 @@ python3 scripts/load_kafka.py
 
 Выполняем SQL-запрос с сохранением .csv
 ```bash
-docker exec -i clickhouse clickhouse-client -u click --password click --queries-file sql/query.sql --format CSVWithNames > result.csv
+docker exec -i clickhouse clickhouse-client -u click --password click --query "$(cat sql/query.sql)" --format CSVWithNames > result.csv
 ```
