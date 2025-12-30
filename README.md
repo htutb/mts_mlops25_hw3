@@ -13,14 +13,17 @@ https://www.kaggle.com/competitions/teta-ml-1-2025/data?select=train.csv
 Компоненты системы:
 
 1.	Kafka Producer
+
 	•	Загружает данные из CSV-файла train.csv
 	•	Отправляет каждую строку CSV как отдельное JSON-сообщение в Kafka-топик hw3_topic
 
 2.	Kafka Infrastructure
+
 	•	Автоматическое создание топика
 	•	AKHQ для просмотра сообщений в Kafka
 
 3.	ClickHouse
+
 	•	Таблица readings — хранит данные для аналитических запросов
 	•	Использование LowCardinality(String) для колонок с небольшим числом уникальных значений
 	•	Партиционирование по месяцу 
@@ -77,7 +80,7 @@ docker exec -i clickhouse clickhouse-client -u click --password click < sql/ddl.
 docker exec -i clickhouse clickhouse-client -u click --password click < sql/optimized_ddl.sql
 ```
 
-!!!Поместите файл train.csv в папку data перед запуском скрипта!!!
+!!! Поместите файл train.csv в папку data перед запуском скрипта !!!
 
 Загружаем данные в Kafka
 ```bash
